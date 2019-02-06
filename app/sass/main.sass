@@ -1,0 +1,685 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: #3390ff
+	color: #fff
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html
+	overflow: hidden
+	height: 100%
+
+body
+	font-size: rem(16)
+	min-width: rem(320)
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow: auto
+	height: 100%
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+input[type='text'],
+input[type='tel'],
+input[type='email'],
+input[type='search'],
+input[type='password'],
+input[type='url'],
+input[type='date'],
+button,
+textarea
+	-webkit-appearance: none
+	-webkit-border-radius: 3px
+	box-sizing: border-box
+	border: 0
+	&:focus
+		outline: none
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+.showMenu
+	top: 0
+
+.btn
+	display: inline-block
+	border: none
+	background-color: #008D37
+	color: #fff
+	text-align: center
+	white-space: nowrap
+	user-select: none
+	transition: all .2s ease-in-out
+	cursor: pointer
+	&:hover
+		background-color: darken($accent, 10%)
+		box-shadow: 0 rem(8) rem(16) 0 rgba(0,0,0,0.2), 0 rem(6) rem(20) 0 rgba(0,0,0,0.19)
+
+a
+	color: #333
+	text-decoration: none
+	&:hover, &:focus
+		text-decoration: none
+		color: #333
+
+.red
+	color: #CA1020
+
+header
+	position: fixed
+	background: rgba(255, 255, 255, 0.9)
+	width: 100%
+	top: -200px
+	transition: top 0.3s
+	z-index: 1000
+	box-shadow: 0 0 rem(10) #ccc
+	.row
+		nav
+			ul
+				display: flex
+				justify-content: center
+				text-align: center
+				margin: 0
+				border-top: rem(1) solid #ccc
+				padding-top: rem(5)
+				li
+					list-style: none
+					a
+						padding: rem(10) rem(15)
+						&:hover
+							text-decoration: underline
+	.row
+		.main-header
+				display: flex
+				justify-content: space-between
+				.logo
+					margin-left: rem(-100)
+					padding-top: rem(10)
+					img
+						width: 80%
+					p
+						margin-bottom: 0
+				.header-form
+					padding: rem(10)
+					input
+						background: rgba(255, 255, 255, 0.8)
+						border-radius: rem(8) 0 0 rem(8)
+						padding: rem(15)
+						width: rem(410)
+						height: rem(40)
+						border-radius: rem(8)
+						font-size: rem(14)
+						line-height: 1.5
+						color: #495057
+						border: rem(1) solid #ced4da
+						margin-right: rem(20)
+					button
+						background: #008D37 url(../img/02_icon_back_call.png) 10px center no-repeat
+						height: rem(40)
+						width: rem(120)
+						border-radius: rem(8)
+						padding: 0 rem(5) 0 rem(30)
+						line-height: rem(40)
+						font-size: rem(18)
+						font-weight: bold
+				.header-phone
+					font-size: rem(14)
+					text-align: center
+					margin-right: rem(-100)
+					a
+						font-size: rem(16)
+						font-weight: bold
+						line-height: rem(16)
+
+.main
+	background: url(../img/main3.jpg) center center/cover no-repeat
+	.container
+		.row
+			justify-content: flex-end
+			.main-header
+				display: flex
+				justify-content: space-between
+				// padding-top: rem(20)
+				.logo
+					margin-left: rem(-100)
+					margin-top: rem(10)
+					p
+						margin-bottom: 0
+				.header-form
+					padding: rem(20)
+					input
+						background: rgba(255, 255, 255, 0.8)
+						border-radius: rem(8) 0 0 rem(8)
+						padding: rem(15)
+						width: rem(410)
+						height: rem(40)
+						border-radius: rem(8)
+						font-size: rem(14)
+						line-height: 1.5
+						color: #495057
+						border: rem(1) solid #ced4da
+						margin-right: rem(20)
+					button
+						background: #008D37 url(../img/02_icon_back_call.png) 10px center no-repeat
+						height: rem(40)
+						width: rem(120)
+						border-radius: rem(8)
+						padding: 0 rem(5) 0 rem(30)
+						line-height: rem(40)
+						font-size: rem(20)
+						font-weight: bold
+				.header-phone
+					font-size: rem(17)
+					text-align: center
+					margin-right: rem(-100)
+					a
+						font-size: rem(26)
+						font-weight: bold
+						line-height: rem(26)
+			.main-order
+				h1
+					text-align: center
+					span
+						font-size: rem(30)
+						line-height: rem(30)
+					.sale, .sale span
+						font-family: bernier
+						font-size: rem(60)
+						font-weight: normal
+						line-height: normal
+				.main-form
+					background: rgba(255, 255, 255, 0.75)
+					border-radius: rem(20)
+					padding: rem(20)
+					margin-bottom: rem(16)
+					border-radius: rem(10)
+					border: 1px solid rgba(0,0,0,0.15)
+					.cta
+						line-height: normal
+						font-size: rem(24)
+						text-align: center
+						font-weight: bold
+					.formgroup
+						display: flex
+						flex-direction: column
+						input
+							margin-bottom: rem(16)
+							width: 100%
+							height: rem(50)
+							line-height: rem(50)
+							border: 0
+							padding: 0 rem(20)
+							background: rgba(0, 0, 0, 0.05)
+							border-radius: rem(12)
+							font-size: rem(16)
+							color: rgba(0, 0, 0, 0.5)
+					.gifts
+						p
+							font-size: rem(18)
+							text-align: center
+						.col-4
+							.gift
+								margin: 0 auto
+								max-width: rem(120)
+					.price-block
+						margin-bottom: rem(20)
+						.price
+							font-size: rem(50)
+							text-align: center
+							color: #CA1020
+							height: rem(50)
+							line-height: rem(50)
+						.main-btn
+							.btn
+								background: #008D37 url(../img/shoping.png) rem(24) center / rem(24) rem(24) no-repeat
+								width: rem(240)
+								height: rem(50)
+								line-height: rem(50)
+								border-radius: rem(12)
+								text-align: center
+								font-size: rem(30)
+
+// Header End
+
+#wehave
+	.container
+		padding-top: rem(80)
+		padding-bottom: rem(60)
+		.row
+			.text-center
+				text-align: center
+				img
+					margin-bottom: rem(20)
+				p
+					line-height: normal
+					font-size: rem(18)
+					text-align: center
+					color: #0B061B
+
+// Wehave End
+
+.description
+	height: rem(700)
+	background: url(../img/banki-1.jpg) 50% 50%/cover no-repeat
+	.container
+		.row
+			.col-12
+				h2
+					margin-top: rem(40)
+					text-align: center
+					line-height: normal
+					font-size: rem(50)
+					font-weight: normal
+					color: #CA1020
+				p
+					font-size: rem(36)
+					text-align: center
+					color: #555
+
+// Description End
+
+.cover
+	height: rem(900)
+	background: url(../img/cover-1.jpg) 50% 100% no-repeat
+	.container
+		.row
+			.col-12
+				h2
+					margin-top: rem(40)
+					margin-bottom: rem(20)
+					text-align: center
+					line-height: normal
+					font-size: rem(50)
+					font-weight: normal
+					color: #CA1020
+				p
+					font-size: rem(20)
+					text-align: center
+
+// Cover End
+
+.video
+	background: url(../img/sub-order-1.jpg) 80% 50%/cover no-repeat
+	padding: rem(20) 0 rem(20) 0
+	background-attachment: fixed
+	.container-fluid
+		max-width: rem(1240)
+		.row
+			.video_wr
+				.thumb-wrap
+					position: relative
+					padding-bottom: 56.25%
+					padding-top: rem(30)
+					height: 0
+					overflow: hidden
+					text-align: center
+					iframe
+						position: absolute
+						top: 0
+						left: 0
+						width: 100%
+						height: 100%
+			.video_text
+				display: flex
+				flex-direction: column
+				justify-content: center
+				h2
+					color: #fff
+					font-size: 32px
+					text-shadow: rem(1) rem(1) rem(5) #000
+					.sale, .sale span
+						font-family: bernier
+						font-size: rem(64)
+						font-weight: normal
+						line-height: normal
+
+// Video End
+
+.scheme
+	padding: rem(70)
+	.container
+		.row
+			.col-12
+				h2
+					text-align: center
+					margin-bottom:rem(40)
+					line-height: normal
+					font-size: rem(50)
+					color: #CA1020
+					font-weight: normal
+					margin-bottom: rem(50)
+					.sale, .sale span
+						font-family: bernier
+						font-size: rem(64)
+						font-weight: normal
+						line-height: normal
+					.sale
+						color: #333
+		.fon
+			font-size: rem(20)
+			color: #000000
+			.sheme-img
+				img
+					margin: 0 auto
+			.all-text
+				display: flex
+				flex-direction: column
+				justify-content: center
+				ul
+					li
+						margin-bottom: rem(20)
+						align-items: center
+			.text-right
+				text-align: right
+				ul
+					li
+						text-align: right
+						.col:nth-child(2)
+							width: rem(70)
+							max-width: rem(70)
+							padding: 0
+			.text-left
+				text-align: left
+				ul
+					li
+						text-align: left
+						.col:nth-child(1)
+							width: rem(70)
+							max-width: rem(70)
+							padding: 0
+
+// Scheme End
+
+.sub-order
+	height: 100%
+	background: #e6e6e6 url(../img/bg-form-new-1.png) 50% 50% no-repeat
+	padding: rem(50)
+	.container
+		.row
+			.nalogka
+				text-align: center
+				// padding: rem(30)
+				img
+					margin: 0 auto
+					height: rem(68)
+			.form-block
+				h2
+					text-align: center
+					// margin: rem(30) 0 rem(10) 0
+					line-height: normal
+					font-size: rem(30)
+					color: #CA1020
+					font-weight: normal
+					.sale, .sale span
+						font-family: bernier
+						font-size: rem(36)
+						font-weight: normal
+						line-height: normal
+					.sale
+						color: #333
+				.sup-form
+					background: rgba(255, 255, 255, 0.75)
+					border-radius: rem(20)
+					padding: rem(20)
+					// margin-bottom: rem(16)
+					border-radius: rem(10)
+					border: 1px solid rgba(0,0,0,0.15)
+					.cta
+						line-height: normal
+						font-size: rem(18)
+						text-align: center
+						font-weight: bold
+					.formgroup
+						display: flex
+						flex-direction: column
+						input
+							margin-bottom: rem(16)
+							width: 100%
+							height: rem(50)
+							line-height: rem(50)
+							border: 0
+							padding: 0 rem(20)
+							background: rgba(0, 0, 0, 0.05)
+							border-radius: rem(12)
+							font-size: rem(16)
+							color: rgba(0, 0, 0, 0.5)
+					.price-block
+						margin-bottom: rem(10)
+						.price
+							font-size: rem(36)
+							text-align: center
+							color: #CA1020
+							height: rem(50)
+							line-height: rem(50)
+						.main-btn
+							.btn
+								background: #008D37 url(../img/shoping.png) rem(18) center / rem(18) rem(18) no-repeat
+								width: 100%
+								height: rem(50)
+								line-height: rem(50)
+								border-radius: rem(12)
+								text-align: center
+								font-size: rem(22)
+
+// Sub-order End
+
+.preimushestva
+	padding: rem(50)
+	.container
+		.row
+			.col-12
+				h2
+					text-align: center
+					margin-bottom:rem(40)
+					line-height: normal
+					font-size: rem(50)
+					color: #CA1020
+					font-weight: normal
+					margin-bottom: rem(50)
+					.sale, .sale span
+						font-family: bernier
+						font-size: rem(64)
+						font-weight: normal
+						line-height: normal
+					.sale
+						color: #333
+			.col-md-3
+				text-align: center
+				img
+					vertical-align: middle
+				p
+					margin: rem(40) 0 rem(60) 0
+					font-size: rem(20)
+					line-height: normal
+
+// Preimushestva End
+
+.elements
+	.container
+		.row
+			.col-md-4
+				img
+					max-width: rem(240)
+					margin: 0 auto
+				.title
+					max-width: rem(240)
+					margin: rem(10) auto
+					font-size: rem(24)
+					line-height: normal
+					font-weight: normal
+					text-align: center
+					color: #0B061B
+				p
+					line-height: normal
+					margin: rem(10) auto rem(10) auto
+					max-width: rem(260)
+					font-size: rem(18)
+					text-align: center
+					color: rgba(0, 0, 0, 0.65)
+
+// Elements End
+
+.reciepts
+	padding: rem(80) 0
+	background: url(../img/reciepts/reciepts.jpg) center center / cover no-repeat
+	.container
+		.row
+			text-align: center
+			h2
+				line-height: normal
+				font-size: 50px
+				text-align: center
+				color: #CA1020
+				font-weight: normal
+				margin: 0 0 40px 0
+			p
+				line-height: normal
+				font-size: 20px
+				text-align: center
+				color: #fff
+				margin: 0 0 70px 0
+		.rec-row
+			.col
+				width: 20%
+				text-align: center
+				.title
+					margin: 30px 0 10px 0
+					color: #fff
+					font-weight: 500
+					font-size: 24px
+				p
+					margin: 10px 0 30px 0
+					color: #fff
+					font-size: 20px
+				.btn
+					background: #CA1020
+					border-radius: 16px
+					display: block
+					height: 52px
+					padding: 0
+					line-height: 52px
+					text-align: center
+					margin: 0 auto 0 auto
+					font-size: 26px
+					color: #FFFFFF
+					max-width: 260px
+					width: 100%
+					font-weight: 500
+					&:hover
+						background-color: darken(#CA1020, 10%)
+						box-shadow: 0 rem(8) rem(16) 0 rgba(0,0,0,0.2), 0 rem(6) rem(20) 0 rgba(0,0,0,0.19)
+
+// Reciepts End
+
+.modal
+	.modal-dialog
+		.modal-content
+			box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25)
+			border-radius: 30px
+			.close
+				display: block
+				width: 40px
+				height: 40px
+				border-radius: 100%
+				line-height: 40px
+				text-align: center
+				color: #fff
+				font-size: 40px
+				position: absolute
+				top: -30px
+				right: -30px
+				background: #CA1020
+				cursor: pointer
+			.img
+				background: transparent center center / cover no-repeat
+				margin: 0 -15px 0 15px
+				border-radius: 30px 0 0 30px
+			.text
+				padding: rem(40)
+				text-align: left
+				.content
+					font-size: 18px
+					color: rgba(0, 0, 0, 0.65)
+					margin: 0 0 40px 0
+					line-height: normal
+					.title
+						font-size: 26px
+						color: #000
+						font-weight: 500
+						margin-bottom: 20px
+						text-align: left
+				.btn
+					width: 240px
+					height: 50px
+					background: #008D37
+					line-height: 50px
+					font-size: 28px
+					text-align: center
+					color: #FFFFFF
+					padding: 0
+					font-weight: 500
+					border-radius: 12px
+
+.modal
+	.modal-dialog
+		.modal-content
+			.img-1
+				background-image: url(../img/reciepts/rec-1.png)
+
+.modal
+	.modal-dialog
+		.modal-content
+			.img-2
+				background-image: url(../img/reciepts/rec-2.png)
+
+.modal
+	.modal-dialog
+		.modal-content
+			.img-3
+				background-image: url(../img/reciepts/rec-3.png)
+
+.modal
+	.modal-dialog
+		.modal-content
+			.img-4
+				background-image: url(../img/reciepts/rec-4.png)
+
+.modal
+	.modal-dialog
+		.modal-content
+			.img-5
+				background-image: url(../img/reciepts/rec-5.png)
+
+// Modal End
+
+
+@import "media" // Always at the end
