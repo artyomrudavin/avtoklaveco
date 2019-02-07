@@ -16,9 +16,9 @@ body input:required:valid,
 body textarea:required:valid
 	color: #666
 
-html
-	overflow: hidden
-	height: 100%
+// html
+// 	overflow: hidden
+// 	height: 100%
 
 body
 	font-size: rem(16)
@@ -26,9 +26,9 @@ body
 	position: relative
 	line-height: 1.65
 	font-family: $default-font
-	overflow: auto
-	height: 100%
-	overflow-x: hidden
+	// overflow: auto
+	// height: 100%
+	// overflow-x: hidden
 	color: $text
 	input, textarea
 		border: #666 1px solid
@@ -261,7 +261,7 @@ header
 						.main-btn
 							.btn
 								background: #008D37 url(../img/shoping.png) rem(24) center / rem(24) rem(24) no-repeat
-								width: rem(240)
+								width: 100%
 								height: rem(50)
 								line-height: rem(50)
 								border-radius: rem(12)
@@ -748,11 +748,12 @@ header
 
 .delivery
 	padding: 40px 0
-	background: url(../img/courier_mirror.png) center bottom no-repeat
+	// background: url(../img/courier_mirror.png) center bottom no-repeat
 	.container
 		.row
 			.text-center
 				text-align: center
+				line-height: normal
 				h2
 					font-size: 50px
 					color: #CA1020
@@ -762,11 +763,132 @@ header
 					font-size: 26px
 					text-align: center
 					color: #000
-					margin: 0 0 85px 0
+					margin: 0 0 70px 0
 			.text-right
-				text-align: center
+				text-align: right
+				.title
+					text-align: unset
+					margin: 0 0 10px 0
+					font-weight: 500
+					line-height: normal
+					font-size: 26px
+				ul
+					padding-left: 0
+					list-style: none
+					li
+						line-height: normal
+						font-size: 20px
+				img
+					margin: 20px 0 40px 0
+			.text-left
+				text-align: left
+				.title
+					text-align: unset
+					margin: 0 0 10px 0
+					font-weight: 500
+					line-height: normal
+					font-size: 26px
+				ul
+					padding-left: 0
+					list-style: none
+					li
+						line-height: normal
+						font-size: 20px
+				a
+					line-height: normal
+					font-size: 20px
+					color: #008D37
+			.img
+				img
+					margin: 0 auto
+					width: 70%
+		.row
+			.container
+				background: url(../img/delivery.png) top center / 100% auto no-repeat
+				padding: 120px 40px 0 40px
+				margin-top: -80px
+				// margin-bottom: 65px
+				z-index: 80
+				.col-12
+					h2
+						line-height: normal
+						font-size: 26px
+						text-align: center
+						color: #fff
+						font-weight: 500
+						margin: 0 0 20px 0
+				form.col-12
+					.row
+						.form-group
+							margin-bottom: rem(16)
+							input
+								display: block
+								backdrop-filter: blur(8px)
+								height: 50px
+								line-height: 50px
+								padding: 0 20px
+								background: rgba(255,255,255,.8)
+								border-radius: 12px
+								line-height: normal
+								font-size: 20px
+								color: rgb(73, 80, 87)
+								width: 100%
+								border: 0
+								margin: 0 0 40px 0
+								z-index: 101
+							button
+								height: 50px
+								line-height: normal
+								font-size: 26px
+								text-align: center
+								border-radius: 12px
+								width: 100%
+								margin: 0 0 40px 0
+								border: 0
+								&:hover
+									background-color: darken($accent, 10%)
+									box-shadow: 0 rem(8) rem(16) 0 rgba(0,0,0,0.2), 0 rem(6) rem(20) 0 rgba(0,0,0,0.19)
 
+// Delivery End
 
+footer, footer a
+	line-height: normal
+	font-size: 20px
+	color: #FFFFFF
 
+footer
+	background: #0B061B
+	padding: 50px 0
+	border: 0
+	.container
+		.row
+			align-items: center
+			.col-4
+			.col-8
+				.row
+					.col-5
+						ul
+							padding-left: 0
+							list-style: none
+							li
+								display: block
+								float: left
+								width: 50%
+								a
+									display: block
+									padding: rem(8) rem(16)
+									white-space: nowrap
+					.col-1
+						div
+							background: rgba(255, 255, 255, 0.75)
+							display: block
+							width: 1px
+							margin: 0 auto
+							height: 150px
+					.col-6
+						.title
+							font-size: 26px
+							margin: 0 0 10px 0
+							font-weight: 500
 
 @import "media" // Always at the end
