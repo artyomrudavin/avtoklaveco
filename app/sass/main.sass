@@ -556,42 +556,42 @@ header
 			text-align: center
 			h2
 				line-height: normal
-				font-size: 50px
+				font-size: rem(50)
 				text-align: center
 				color: #CA1020
 				font-weight: normal
-				margin: 0 0 40px 0
+				margin: 0 0 rem(40) 0
 			p
 				line-height: normal
-				font-size: 20px
+				font-size: rem(20)
 				text-align: center
 				color: #fff
-				margin: 0 0 70px 0
+				margin: 0 0 rem(70) 0
 		.rec-row
 			.col
 				width: 20%
 				text-align: center
 				.title
-					margin: 30px 0 10px 0
+					margin: rem(30) 0 rem(10) 0
 					color: #fff
 					font-weight: 500
-					font-size: 24px
+					font-size: rem(24)
 				p
-					margin: 10px 0 30px 0
+					margin: rem(10) 0 rem(30) 0
 					color: #fff
-					font-size: 20px
+					font-size: rem(20)
 				.btn
 					background: #CA1020
 					border-radius: 16px
 					display: block
-					height: 52px
+					height: rem(52)
 					padding: 0
-					line-height: 52px
+					line-height: rem(52)
 					text-align: center
 					margin: 0 auto 0 auto
-					font-size: 26px
+					font-size: rem(26)
 					color: #FFFFFF
-					max-width: 260px
+					max-width: rem(260)
 					width: 100%
 					font-weight: 500
 					&:hover
@@ -603,46 +603,46 @@ header
 .modal
 	.modal-dialog
 		.modal-content
-			box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25)
+			box-shadow: 0px 0px rem(25) rgba(0, 0, 0, 0.25)
 			border-radius: 30px
 			.close
 				display: block
-				width: 40px
-				height: 40px
+				width: rem(40)
+				height: rem(40)
 				border-radius: 100%
-				line-height: 40px
+				line-height: rem(40)
 				text-align: center
 				color: #fff
-				font-size: 40px
+				font-size: rem(40)
 				position: absolute
-				top: -30px
-				right: -30px
+				top: rem(-30)
+				right: rem(-30)
 				background: #CA1020
 				cursor: pointer
 			.img
 				background: transparent center center / cover no-repeat
-				margin: 0 -15px 0 15px
-				border-radius: 30px 0 0 30px
+				margin: 0 rem(-15) 0 rem(15)
+				border-radius: rem(30) 0 0 rem(30)
 			.text
 				padding: rem(40)
 				text-align: left
 				.content
-					font-size: 18px
+					font-size: rem(18)
 					color: rgba(0, 0, 0, 0.65)
-					margin: 0 0 40px 0
+					margin: 0 0 rem(40) 0
 					line-height: normal
 					.title
-						font-size: 26px
+						font-size: rem(26)
 						color: #000
 						font-weight: 500
-						margin-bottom: 20px
+						margin-bottom: rem(20)
 						text-align: left
 				.btn
-					width: 240px
-					height: 50px
+					width: rem(240)
+					height: rem(50)
 					background: #008D37
-					line-height: 50px
-					font-size: 28px
+					line-height: rem(50)
+					font-size: rem(28)
 					text-align: center
 					color: #FFFFFF
 					padding: 0
@@ -680,6 +680,93 @@ header
 				background-image: url(../img/reciepts/rec-5.png)
 
 // Modal End
+
+.video-recept
+	padding: 50px
+	background: url(../img/models.png) center center / cover no-repeat
+	.container
+		.row
+			.col-12
+				text-align: center
+				h2
+					font-size: rem(50)
+					font-weight: normal
+					margin-bottom: rem(40)
+					.sale, .sale span
+						font-family: bernier
+						font-size: rem(64)
+						font-weight: normal
+						line-height: normal
+				.video_wr
+					max-width: rem(900)
+					margin: 0 auto
+					.thumb-wrap
+						position: relative
+						padding-bottom: 56.25%
+						padding-top: rem(30)
+						height: 0
+						overflow: hidden
+						text-align: center
+						border-radius: 16px
+						iframe
+							position: absolute
+							top: 0
+							left: 0
+							width: 100%
+							height: 100%
+
+// Video-recept End
+
+.zavod
+	padding: rem(50)
+	&::after
+		display: block
+		width: rem(480)
+		margin: rem(40) auto 0 auto
+		border-top: 2px solid rgba(0, 0, 0, 0.25)
+		height: 0px
+		content: ''
+	.container
+		.row
+			.col-12
+				text-align: center
+				h2
+					font-size: rem(50)
+					font-weight: normal
+					line-height: normal
+					margin-bottom: rem(40)
+					.sale, .sale span
+						font-family: bernier
+						font-size: rem(64)
+						font-weight: normal
+						line-height: normal
+				p
+					font-size: rem(22)
+					line-height: normal
+
+// Zavod End
+
+.delivery
+	padding: 40px 0
+	background: url(../img/courier_mirror.png) center bottom no-repeat
+	.container
+		.row
+			.text-center
+				text-align: center
+				h2
+					font-size: 50px
+					color: #CA1020
+					font-weight: 500
+					margin: 0 0 40px 0
+				p
+					font-size: 26px
+					text-align: center
+					color: #000
+					margin: 0 0 85px 0
+			.text-right
+				text-align: center
+
+
 
 
 @import "media" // Always at the end
