@@ -96,7 +96,8 @@ a
 
 header
 	position: fixed
-	background: rgba(255, 255, 255, 0.9)
+	display: none
+	background: rgba(255, 255, 255, 0.95)
 	width: 100%
 	top: -200px
 	transition: top 0.3s
@@ -124,17 +125,23 @@ header
 				.logo
 					margin-left: rem(-100)
 					padding-top: rem(10)
+					flex: 1 0 auto
 					img
 						width: 80%
 					p
 						margin-bottom: 0
 				.header-form
+					display: flex
+					justify-content: center
+					width: 100%
 					padding: rem(10)
 					input
 						background: rgba(255, 255, 255, 0.8)
 						border-radius: rem(8) 0 0 rem(8)
 						padding: rem(15)
-						width: rem(410)
+						width: 70%
+						max-width: rem(410)
+						// width: rem(410)
 						height: rem(40)
 						border-radius: rem(8)
 						font-size: rem(14)
@@ -145,7 +152,8 @@ header
 					button
 						background: #008D37 url(../img/02_icon_back_call.png) 10px center no-repeat
 						height: rem(40)
-						width: rem(120)
+						width: 30%
+						max-width: rem(120)
 						border-radius: rem(8)
 						padding: 0 rem(5) 0 rem(30)
 						line-height: rem(40)
@@ -155,32 +163,40 @@ header
 					font-size: rem(14)
 					text-align: center
 					margin-right: rem(-100)
+					flex: 1 0 auto
 					a
 						font-size: rem(16)
 						font-weight: bold
 						line-height: rem(16)
 
 .main
-	background: url(../img/main3.jpg) center center/cover no-repeat
+	background: url(../img/main3.jpg) 30% center/cover no-repeat
 	.container
 		.row
 			justify-content: flex-end
 			.main-header
-				display: flex
+				// display: flex
+				display: none
 				justify-content: space-between
+				// flex-direction: column
 				// padding-top: rem(20)
 				.logo
 					margin-left: rem(-100)
+					flex: 1 0 auto
 					margin-top: rem(10)
 					p
 						margin-bottom: 0
 				.header-form
+					display: flex
+					justify-content: center
+					width: 100%
 					padding: rem(20)
 					input
 						background: rgba(255, 255, 255, 0.8)
 						border-radius: rem(8) 0 0 rem(8)
 						padding: rem(15)
-						width: rem(410)
+						width: 70%
+						max-width: rem(410)
 						height: rem(40)
 						border-radius: rem(8)
 						font-size: rem(14)
@@ -191,13 +207,15 @@ header
 					button
 						background: #008D37 url(../img/02_icon_back_call.png) 10px center no-repeat
 						height: rem(40)
-						width: rem(120)
+						width: 30%
+						max-width: rem(120)
 						border-radius: rem(8)
 						padding: 0 rem(5) 0 rem(30)
 						line-height: rem(40)
 						font-size: rem(20)
 						font-weight: bold
 				.header-phone
+					flex: 1 0 auto
 					font-size: rem(17)
 					text-align: center
 					margin-right: rem(-100)
@@ -501,7 +519,7 @@ header
 					text-align: center
 					margin-bottom:rem(40)
 					line-height: normal
-					font-size: rem(50)
+					font-size: rem(30)
 					color: #CA1020
 					font-weight: normal
 					margin-bottom: rem(50)
@@ -568,8 +586,8 @@ header
 				color: #fff
 				margin: 0 0 rem(70) 0
 		.rec-row
-			.col
-				width: 20%
+			.col-md-3
+				// width: 40%
 				text-align: center
 				.title
 					margin: rem(30) 0 rem(10) 0
@@ -717,11 +735,58 @@ header
 
 // Video-recept End
 
+.functions
+	padding: rem(40)
+	.container
+		.row
+			margin-bottom: rem(20)
+			h2
+				font-size: rem(50)
+				font-weight: normal
+				line-height: normal
+				text-align: center
+				margin-bottom: rem(40)
+				.sale, .sale span
+					font-family: bernier
+					font-size: rem(64)
+					font-weight: normal
+					line-height: normal
+			p
+				line-height: normal
+				font-size: rem(20)
+				text-align: center
+				color: #0B061B
+				margin: 0 0 rem(40) 0
+			.img-bottom
+				margin: 0 auto
+			.row
+				.image
+					img
+						margin: 0 auto
+				.col-md-6
+					line-height: normal
+					font-size: rem(15)
+					text-align: center
+					color: #0B061B
+					font-weight: 500
+					p
+						margin: 0 0 rem(40) 0
+						font-size: rem(26)
+						color: #CA1020
+					.row
+						.col-6
+							padding: 0 rem(30)
+							margin-bottom: rem(10)
+							height: rem(180)
+							img
+								margin: 0 auto rem(10) auto
+// Functions End
+
 .zavod
 	padding: rem(50)
 	&::after
 		display: block
-		width: rem(480)
+		width: 80%
 		margin: rem(40) auto 0 auto
 		border-top: 2px solid rgba(0, 0, 0, 0.25)
 		height: 0px
@@ -747,56 +812,55 @@ header
 // Zavod End
 
 .delivery
-	padding: 40px 0
-	// background: url(../img/courier_mirror.png) center bottom no-repeat
+	padding: rem(40) 0
 	.container
 		.row
 			.text-center
 				text-align: center
 				line-height: normal
 				h2
-					font-size: 50px
+					font-size: rem(50)
 					color: #CA1020
 					font-weight: 500
-					margin: 0 0 40px 0
+					margin: 0 0 rem(40) 0
 				p
-					font-size: 26px
+					font-size: rem(26)
 					text-align: center
 					color: #000
-					margin: 0 0 70px 0
+					margin: 0 0 rem(70) 0
 			.text-right
 				text-align: right
 				.title
 					text-align: unset
-					margin: 0 0 10px 0
+					margin: 0 0 rem(10) 0
 					font-weight: 500
 					line-height: normal
-					font-size: 26px
+					font-size: rem(26)
 				ul
 					padding-left: 0
 					list-style: none
 					li
 						line-height: normal
-						font-size: 20px
+						font-size: rem(20)
 				img
-					margin: 20px 0 40px 0
+					margin: rem(20) 0 rem(40) 0
 			.text-left
 				text-align: left
 				.title
 					text-align: unset
-					margin: 0 0 10px 0
+					margin: 0 0 rem(10) 0
 					font-weight: 500
 					line-height: normal
-					font-size: 26px
+					font-size: rem(26)
 				ul
 					padding-left: 0
 					list-style: none
 					li
 						line-height: normal
-						font-size: 20px
+						font-size: rem(20)
 				a
 					line-height: normal
-					font-size: 20px
+					font-size: rem(20)
 					color: #008D37
 			.img
 				img
@@ -805,18 +869,17 @@ header
 		.row
 			.container
 				background: url(../img/delivery.png) top center / 100% auto no-repeat
-				padding: 120px 40px 0 40px
-				margin-top: -80px
-				// margin-bottom: 65px
+				padding: rem(120) rem(40) 0 rem(40)
+				margin-top: rem(-80)
 				z-index: 80
 				.col-12
 					h2
 						line-height: normal
-						font-size: 26px
+						font-size: rem(26)
 						text-align: center
 						color: #fff
 						font-weight: 500
-						margin: 0 0 20px 0
+						margin: 0 0 rem(20) 0
 				form.col-12
 					.row
 						.form-group
@@ -824,26 +887,26 @@ header
 							input
 								display: block
 								backdrop-filter: blur(8px)
-								height: 50px
-								line-height: 50px
+								height: rem(50)
+								line-height: rem(50)
 								padding: 0 20px
 								background: rgba(255,255,255,.8)
 								border-radius: 12px
 								line-height: normal
-								font-size: 20px
+								font-size: rem(20)
 								color: rgb(73, 80, 87)
 								width: 100%
 								border: 0
-								margin: 0 0 40px 0
+								margin: 0 0 rem(40) 0
 								z-index: 101
 							button
-								height: 50px
+								height: rem(50)
 								line-height: normal
-								font-size: 26px
+								font-size: rem(26)
 								text-align: center
 								border-radius: 12px
 								width: 100%
-								margin: 0 0 40px 0
+								margin: 0 0 rem(40) 0
 								border: 0
 								&:hover
 									background-color: darken($accent, 10%)
@@ -853,17 +916,16 @@ header
 
 footer, footer a
 	line-height: normal
-	font-size: 20px
+	font-size: rem(20)
 	color: #FFFFFF
 
 footer
 	background: #0B061B
-	padding: 50px 0
+	padding: rem(50) 0
 	border: 0
 	.container
 		.row
 			align-items: center
-			.col-4
 			.col-8
 				.row
 					.col-5
@@ -884,11 +946,43 @@ footer
 							display: block
 							width: 1px
 							margin: 0 auto
-							height: 150px
+							height: rem(150)
 					.col-6
 						.title
-							font-size: 26px
-							margin: 0 0 10px 0
+							font-size: rem(26)
+							margin: 0 0 rem(10) 0
 							font-weight: 500
+
+.main
+	// display: none
+#wehave
+	display: none
+.description
+	display: none
+.cover
+	display: none
+.video
+	display: none
+.scheme
+	display: none
+.sub-order
+	display: none
+.preimushestva
+	display: none
+.elements
+	display: none
+.reciepts
+	display: none
+.video-recept
+	display: none
+.functions
+	display: none
+.zavod
+	display: none
+.delivery
+	display: none
+footer
+	display: none
+
 
 @import "media" // Always at the end
