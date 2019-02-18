@@ -33,11 +33,16 @@
 			<div class="row">
 				<div class="col-12 main-header">
 					<div class="logo">
-						<img src="img/logo/logo-bl-1.png" alt="" class="img-responsive">
-						<!-- <p>Производство и продажа автоклавов<br> из нержавеющей стали!</p> -->
+						<img src="img/logo/logo-bl-1.png" alt="" class="img-responsive" id="icon">
 					</div>
-					<form class="header-form" method="post">
-						<input type="tel" required placeholder="Введите Ваш номер телефона для обратного звонка">
+					<form class="header-form" method="post" id="headerForm">
+
+						<!-- Hidden Required Fields -->
+						<input type="hidden" name="DATA[TITLE]" value="Новый лид: Автоклав - Bondareff Eco; Форма - Обратный звонок;">
+						<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Автоклавы">
+						<!-- END Hidden Required Fields -->
+
+						<input type="tel" required placeholder="Введите Ваш номер телефона для обратного звонка" name="DATA[PHONE_MOBILE]">
 						<button class="btn" type="submit">Заказать</button>
 					</form>
 					<div class="header-phone">
@@ -50,15 +55,14 @@
 			<div class="row">
 				<div class="col-12">
 					<nav>
-						<ul>
+						<ul id="menu">
 							<li><a href="#home">Автоклав</a></li>
-							<li><a href="#models">Модели</a></li>
-							<li><a href="#modern">Модернизация</a></li>
 							<li><a href="#video">Видеообзор</a></li>
-							<li><a href="#recipe">Рецепты</a></li>
+							<li><a href="#modern">Модернизация</a></li>
+							<li><a href="#reciepts">Рецепты</a></li>
+							<li><a href="#howkook">Как готовить?</a></li>
 							<li><a href="#produce">Производство</a></li>
 							<li><a href="#delivery">Доставка</a></li>
-							<li><a href="#dropps">Оптовикам</a></li>
 						</ul>
 					</nav>		
 				</div>
@@ -68,7 +72,7 @@
 
 	<main>
 			
-		<section class="main">
+		<section class="main" id="home">
 			<div class="container">
 				<div class="row">
 					<div class="col-12 main-header">
@@ -76,8 +80,15 @@
 							<img src="img/logo/logo-bl-1.png" alt="" class="img-responsive">
 							<p>Производство и продажа автоклавов из нержавеющей стали!</p>
 						</div>
-						<form class="header-form" method="post">
-							<input type="tel" required placeholder="Введите Ваш номер телефона для обратного звонка">
+						<form class="header-form" method="post" id="headerFormMain">
+
+							<!-- Hidden Required Fields -->
+							<input type="hidden" name="DATA[TITLE]" value="Новый лид: Автоклав - Bondareff Eco; Форма - Обратный звонок;">
+							<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Автоклавы">
+							<!-- END Hidden Required Fields -->
+
+							<input type="tel" required placeholder="Введите Ваш номер телефона для обратного звонка" name="DATA[PHONE_MOBILE]">
+
 							<button class="btn" type="submit">Заказать</button>
 						</form>
 						<div class="header-phone">
@@ -94,11 +105,17 @@
 						</h1>
 						<img src="img/main-5.png" alt="" class="img-responsive mobile-img">
 						<div class="order-block">
-							<form class="main-form" method="post">
+							<form class="main-form" method="post" id="mainForm">
 								<p class="cta">Закажи автоклав на 20 банок 0,5 литров</p>
 								<div class="formgroup">
-									<input type="text" name="name" class="form-control" placeholder="Ваше имя" maxlength="58">
-									<input type="tel" name="phone" class="form-control" placeholder="Номер телефона">
+
+									<!-- Hidden Required Fields -->
+									<input type="hidden" name="DATA[TITLE]" value="Новый лид: Автоклав - Bondareff Eco; Форма - Главный экран;">
+									<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Автоклавы">
+									<!-- END Hidden Required Fields -->
+
+									<input type="text" class="form-control" placeholder="Ваше имя" maxlength="58" name="DATA[NAME]">
+									<input type="tel" class="form-control" placeholder="Номер телефона" name="DATA[PHONE_MOBILE]" required>
 								</div>
 								<div class="row price-block">
 									<div class="col-md-6 price">
@@ -181,7 +198,7 @@
 			</div>
 		</section>
 
-		<section class="video">
+		<section class="video" id="video">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-4 col-12 video_text">
@@ -270,11 +287,18 @@
 							Заказывайте автоклав <span class="sale">BONDAREFF <span class="red">ECO</span></span> -
 							Доставим бесплатно!
 						</h2>
-						<form class="sup-form" method="post">
+						<form class="sup-form" method="post" id="akciyaForm1">
 							<p class="cta">Автоклав из нержавеющей стали<br> на 20 банок 0,5 литров</p>
 							<div class="formgroup">
-								<input type="text" name="name" class="form-control" placeholder="Ваше имя" maxlength="58">
-								<input type="tel" name="phone" class="form-control" placeholder="Номер телефона">
+
+								<!-- Hidden Required Fields -->
+								<input type="hidden" name="DATA[TITLE]" value="Новый лид: Автоклав - Bondareff Eco; Форма - Акция-1;">
+								<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Автоклавы">
+								<!-- END Hidden Required Fields -->
+
+								<input type="text" class="form-control" placeholder="Ваше имя" maxlength="58" name="DATA[NAME]">
+								<input type="tel" class="form-control" placeholder="Номер телефона" name="DATA[PHONE_MOBILE]" required>
+
 							</div>
 							<div class="row price-block">
 								<div class="col-md-6 price">
@@ -297,19 +321,19 @@
 					<div class="col-12">
 						<h2>Преимущества и комплектация автоклава<br><span class="sale">BONDAREFF <span class="red">ECO</span></span></h2>
 					</div>
-					<div class="col-md-3">
+					<div class="col-6 col-md-3">
 						<img src="../img/preimushestva/icon_autoclav.png">
 						<p>cпециально разработанная конструкция для безопасной и качественной работы</p>
 					</div>
-					<div class="col-md-3">
+					<div class="col-6 col-md-3">
 						<img src="../img/preimushestva/icon_cover.png">
 						<p>уникальная конструкция крышки и дна автоклава</p>
 					</div>
-					<div class="col-md-3">
+					<div class="col-6 col-md-3">
 						<img src="../img/preimushestva/icon_ruchka.png">
 						<p>удобные ненагревающиеся ручки</p>
 					</div>
-					<div class="col-md-3">
+					<div class="col-6 col-md-3">
 						<img src="../img/preimushestva/icon_casets.png">
 						<p>кассеты для банок в комплекте</p>
 					</div>
@@ -320,42 +344,42 @@
 		<section class="elements">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-4">
+					<div class="col-6 col-md-4">
 						<img src="../img/elements/elements-1.png" class="img-responsive">
 						<h3 class="title">Основной бак</h3>
 						<p>для загрузки кассет с банками и залива жидкости</p>
 					</div>
-					<div class="col-md-4">
+					<div class="col-6 col-md-4">
 						<img src="../img/elements/elements-2.png" class="img-responsive">
-						<h3 class="title">5.Клапан сброса избыточного давления</h3>
+						<h3 class="title">Клапан сброса избыточного давления</h3>
 						<p>позволяет избежать превышения допустимых показателей во время использования</p>
 					</div>
-					<div class="col-md-4">
+					<div class="col-6 col-md-4">
 						<img src="../img/elements/elements-3.png" class="img-responsive">
 						<h3 class="title">Манометр</h3>
 						<p>для контроля текущего состояния давления внутри аппарата во время использования</p>
 					</div>
-					<div class="col-md-4">
+					<div class="col-6 col-md-4">
 						<img src="../img/elements/elements-4.png" class="img-responsive">
 						<h3 class="title">Термометр</h3>
 						<p>для контроля температурного режима, в зависимости от рецептуры</p>
 					</div>
-					<div class="col-md-4">
+					<div class="col-6 col-md-4">
 						<img src="../img/elements/elements-8.png" class="img-responsive">
 						<h3 class="title">Кассеты для банок</h3>
 						<p>для удобства загрузки банок и предотвращения срыва крышек на них</p>
 					</div>
-					<div class="col-md-4">
+					<div class="col-6 col-md-4">
 						<img src="../img/elements/elements-11.png" class="img-responsive">
 						<h3 class="title">Усиленные металлические ручки</h3>
 						<p>для переноса автоклава (не нагреваются)</p>
 					</div>
-					<div class="col-md-4">
+					<div class="col-6 col-md-4">
 						<img src="../img/elements/elements-5.png" class="img-responsive">
 						<h3 class="title">Сборник рецептов</h3>
 						<p>сборник множества рецептов, чтобы удивлять друзей и близких</p>
 					</div>
-					<div class="col-md-4">
+					<div class="col-6 col-md-4">
 						<img src="../img/elements/elements-6.png" class="img-responsive">
 						<p class="title">Пневмозолотник</p>
 						<p>для накачивания рабочего давления</p>
@@ -369,7 +393,7 @@
 			</div>
 		</section>
 
-		<section class="reciepts">
+		<section class="reciepts" id="reciepts">
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
@@ -569,7 +593,7 @@
 			</div>
 		</section>
 
-		<section class="video-recept">
+		<section class="video-recept" id="howkook">
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
@@ -599,11 +623,18 @@
 							Заказывайте автоклав <span class="sale">BONDAREFF <span class="red">ECO</span></span> -
 							Доставим бесплатно!
 						</h2>
-						<form class="sup-form" method="post">
+						<form class="sup-form" method="post" id="akciyaForm2">
 							<p class="cta">Автоклав из нержавеющей стали<br> на 20 банок 0,5 литров</p>
 							<div class="formgroup">
-								<input type="text" name="name" class="form-control" placeholder="Ваше имя" maxlength="58">
-								<input type="tel" name="phone" class="form-control" placeholder="Номер телефона">
+
+								<!-- Hidden Required Fields -->
+								<input type="hidden" name="DATA[TITLE]" value="Новый лид: Автоклав - Bondareff Eco; Форма - Акция-2;">
+								<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Автоклавы">
+								<!-- END Hidden Required Fields -->
+
+								<input type="text" class="form-control" placeholder="Ваше имя" maxlength="58" name="DATA[NAME]">
+								<input type="tel" class="form-control" placeholder="Номер телефона" name="DATA[PHONE_MOBILE]" required>
+
 							</div>
 							<div class="row price-block">
 								<div class="col-md-6 price">
@@ -620,7 +651,7 @@
 			</div>
 		</section>
 
-		<section class="functions">
+		<section class="functions" id="modern">
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
@@ -671,7 +702,7 @@
 			</div>
 		</section>
 
-		<section class="zavod">
+		<section class="zavod" id="produce">
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
@@ -690,7 +721,7 @@
 			</div>
 		</section>
 
-		<section class="delivery">
+		<section class="delivery" id="delivery">
 			<div class="container">
 				<div class="row">
 					<div class="col-12 text-center">
@@ -731,16 +762,22 @@
 						<div class="col-12">
 							<h2>Расчитать стоимость и сроки доставки</h2>
 						</div>
-						<form class="col-12">
+						<form class="col-12" method="post" id="deliveryForm">
 							<div class="row">
 								<div class="col-md-5">
-									<div class="form-group">
-										<input id="city" name="city" type="text" placeholder="Ваш населенный пункт" class="form-control input-md">
-									</div>
+
+									<!-- Hidden Required Fields -->
+								<input type="hidden" name="DATA[TITLE]" value="Новый лид: Автоклав - Bondareff Eco; Форма - Стоимость доставки;">
+								<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Автоклавы">
+								<!-- END Hidden Required Fields -->
+
+								<div class="form-group">
+									<input type="text" class="form-control input-md" placeholder="Ваш населенный пункт" maxlength="58" name="DATA[NAME]">
+								</div>
 								</div>
 								<div class="col-md-5">
 									<div class="form-group">
-										<input id="tel" name="tel" type="tel" placeholder="Ваш телефон *" class="form-control input-md">
+										<input type="tel" class="form-control input-md" placeholder="Ваш номер телефона" name="DATA[PHONE_MOBILE]" required>
 									</div>
 								</div>
 								<div class="col-md-2">
@@ -766,15 +803,14 @@
 				<div class="col-md-8">
 					<div class="row">
 						<div class="col-md-5 menu">
-							<ul class="list-unstyled">
-								<li class="nav-item active"><a class="nav-link" href="#main">Автоклав</a></li>
-								<li class="nav-item"><a class="nav-link" href="#video-obzor">Видео-обзор</a></li>
-								<li class="nav-item"><a class="nav-link" href="#models">Модели</a></li>
-								<li class="nav-item"><a class="nav-link" href="#equipment">Модернизация</a></li>
-								<li class="nav-item"><a class="nav-link" href="#reciepts">Рецепты</a></li>
-								<li class="nav-item"><a class="nav-link" href="#zavod">Производство</a></li>
-								<li class="nav-item"><a class="nav-link" href="#reviews">Отзывы</a></li>
-								<li class="nav-item"><a class="nav-link" href="#delivery">Доставка</a></li>
+							<ul class="menu-f">
+								<li><a href="#home">Автоклав</a></li>
+								<li><a href="#video">Видеообзор</a></li>
+								<li><a href="#modern">Модернизация</a></li>
+								<li><a href="#reciepts">Рецепты</a></li>
+								<li><a href="#howkook">Как готовить?</a></li>
+								<li><a href="#produce">Производство</a></li>
+								<li><a href="#delivery">Доставка</a></li>
 							</ul>
 						</div>
 						<div class="col-md-1 brd-white"><div class="border-right"></div></div>
