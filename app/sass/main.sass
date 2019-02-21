@@ -123,7 +123,7 @@ header
 						padding-top: rem(10)
 						flex: 1 0 auto
 						img
-							max-width: rem(192)
+							max-width: rem(165)
 						p
 							margin-bottom: 0
 					.header-form
@@ -156,7 +156,7 @@ header
 							font-weight: bold
 					.header-phone
 						font-size: rem(14)
-						text-align: center
+						text-align: right
 						flex: 1 0 auto
 						a
 							font-size: rem(16)
@@ -448,10 +448,15 @@ header
 
 .sub-order
 	height: 100%
-	background: #e6e6e6 url(../img/bg-form-new-1.png) 50% 50% no-repeat
+	// background: #e6e6e6 url(../img/bg-form-new-1.png) 50% 50% no-repeat
+	background: #e6e6e6
 	padding: rem(30) 0
 	.container
 		.row
+			.img-sub
+				.mob-hide
+					margin: 0 auto
+					width: rem(130)
 			.nalogka
 				text-align: center
 				img
@@ -459,27 +464,27 @@ header
 					height: rem(68)
 			.form-block
 				h2
+					font-size: rem(30)
 					text-align: center
 					line-height: normal
-					font-size: rem(30)
 					color: #CA1020
 					font-weight: normal
 					.sale, .sale span
-						font-family: bernier
 						font-size: rem(36)
+						font-family: bernier
 						font-weight: normal
 						line-height: normal
 					.sale
 						color: #333
 				.sup-form
-					background: rgba(255, 255, 255, 0.75)
 					border-radius: rem(20)
 					padding: rem(20)
 					border-radius: rem(10)
+					background: rgba(255, 255, 255, 0.75)
 					border: 1px solid rgba(0,0,0,0.15)
 					.cta
-						line-height: normal
 						font-size: rem(18)
+						line-height: normal
 						text-align: center
 						font-weight: bold
 					.formgroup
@@ -500,19 +505,19 @@ header
 						margin-bottom: rem(10)
 						.price
 							font-size: rem(36)
-							text-align: center
-							color: #CA1020
 							height: rem(50)
 							line-height: rem(50)
+							text-align: center
+							color: #CA1020
 						.main-btn
 							.btn
-								background: #008D37 url(../img/shoping.png) rem(18) center / rem(18) rem(18) no-repeat
-								width: 100%
 								height: rem(50)
 								line-height: rem(50)
 								border-radius: rem(12)
-								text-align: center
 								font-size: rem(22)
+								background: #008D37 url(../img/shoping.png) rem(18) center / rem(18) rem(18) no-repeat
+								width: 100%
+								text-align: center
 
 // Sub-order End
 
@@ -551,7 +556,7 @@ header
 		.row
 			.col-md-4
 				img
-					max-width: rem(150)
+					max-width: rem(140)
 					margin: 0 auto
 				.title
 					max-width: rem(240)
@@ -597,6 +602,7 @@ header
 					margin: 0 auto
 				.title
 					font-size: rem(18)
+					min-height: rem(40)
 					margin: rem(20) 0 rem(10) 0
 					font-weight: 500
 					color: #fff
@@ -812,7 +818,7 @@ header
 					font-weight: normal
 					line-height: normal
 					.sale, .sale span
-						font-size: rem(38)
+						font-size: rem(30)
 						font-family: bernier
 						font-weight: normal
 						line-height: normal
@@ -934,16 +940,20 @@ footer
 	.container
 		.row
 			align-items: center
-			.col-md-4
+			.politic
+				text-align: center
+				width: 100%
+			.col-lg-3
 				.footer-logo
 					margin: 0 auto
-			.col-md-8
+			.col-lg-9
 				.row
 					.menu
 						margin-bottom: 30px
 						ul
 							padding-left: 0
 							list-style: none
+							text-align: center
 							li
 								display: block
 								float: left
@@ -983,6 +993,8 @@ footer
 .scheme
 	// display: none
 .sub-order
+	// display: none
+.sub-order-2
 	// display: none
 .preimushestva
 	// display: none
