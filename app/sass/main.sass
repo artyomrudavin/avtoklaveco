@@ -161,7 +161,12 @@ header
 						a
 							font-size: rem(16)
 							line-height: rem(16)
-							font-weight: bold
+							font-weight: bol		
+		.mob-call
+			justify-content: center
+			margin-bottom: rem(10)
+			.btn
+				padding: rem(5) rem(25)
 
 .main
 	background: url(../img/main2.jpg) center center/cover no-repeat
@@ -554,6 +559,7 @@ header
 .elements
 	.container
 		.row
+			justify-content: center
 			.col-md-4
 				img
 					max-width: rem(140)
@@ -645,8 +651,8 @@ header
 				color: #fff
 				font-size: rem(40)
 				position: absolute
-				top: rem(-30)
-				right: rem(-30)
+				top: rem(-5)
+				right: rem(-5)
 				background: #CA1020
 				cursor: pointer
 			.img
@@ -654,8 +660,20 @@ header
 				margin: 0 rem(-15) 0 rem(15)
 				border-radius: rem(30) 0 0 rem(30)
 			.text
-				padding: rem(20)
+				padding: rem(40)
 				text-align: left
+				.b-title
+					display: block
+					margin: 0 0 20px 0
+					text-align: center
+					width: 100%
+					line-height: normal
+					font-size: 24px
+					color: #000
+					font-weight: 600
+					span
+						font-size: 16px
+						font-weight: normal
 				.content
 					font-size: rem(16)
 					margin: 0 0 rem(40) 0
@@ -678,6 +696,30 @@ header
 					border-radius: 12px
 					background: #008D37
 					color: #FFFFFF
+				.call-form
+					.formgroup
+						display: flex
+						flex-direction: column
+						input
+							margin-bottom: rem(16)
+							width: 100%
+							height: rem(50)
+							line-height: rem(50)
+							border: 0
+							padding: 0 rem(20)
+							background: rgba(0, 0, 0, 0.05)
+							border-radius: rem(12)
+							font-size: rem(16)
+							color: rgba(0, 0, 0, 0.5)
+					.main-btn
+						.btn
+							height: rem(50)
+							line-height: rem(50)
+							border-radius: rem(12)
+							font-size: rem(22)
+							background: #008D37
+							width: 100%
+							text-align: center
 
 .modal
 	.modal-dialog
@@ -1003,7 +1045,7 @@ footer
 .reciepts
 	// display: none
 .video-recept
-	// display: none
+	display: none
 .functions
 	// display: none
 .zavod

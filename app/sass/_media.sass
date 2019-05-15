@@ -230,9 +230,12 @@
 					.title
 						min-height: rem(40)
 
-	// .modal
-	// 	.modal-dialog
-	// 		.modal-content
+	.modal
+		.modal-dialog
+			.modal-content
+				.close
+					top: rem(-30)
+					right: rem(-30)
 	// 			.text
 	// 				padding: rem(40)
 	// 				.content
@@ -330,6 +333,20 @@
 
 // ≤992px
 +media-breakpoint-up(lg)
+
+	header
+		.container
+			.row
+				nav
+					#menu
+						display: flex
+						flex-direction: row
+						padding-top: rem(5)
+						li
+							a
+								padding: rem(10) rem(15)
+			.mob-call
+				display: none
 
 	.main
 		background: url(../img/main3.jpg) center center/cover no-repeat
