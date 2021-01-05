@@ -1,5 +1,5 @@
 {
-  "name": "avtoklav bondareff",
+  "name": "avtoklav-bondareff",
   "version": "1.0.0",
   "description": "Avtoklav Bondareff Max",
   "main": "index.js",
@@ -9,7 +9,7 @@
   "author": "Artyom Rudavin",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.26.5",
+    "browser-sync": "^2.26.7",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-clean-css": "^4.2.0",
     "gulp-concat": "^2.6.1",
